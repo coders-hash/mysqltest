@@ -1,0 +1,57 @@
+Step 1: Setting Up the Database
+• Create a new database:
+• CREATE DATABASE practice_db;
+• USE practice_db;
+Step 2: Creating Tables
+1. Employees Table:
+2. CREATE TABLE employees (
+3. id INT AUTO_INCREMENT PRIMARY KEY,
+4. name VARCHAR(100),
+5. age INT,
+6. department VARCHAR(50),
+7. salary DECIMAL(10,2),
+8. hire_date DATE
+9. );
+10. Departments Table:
+11. CREATE TABLE departments (
+12. id INT AUTO_INCREMENT PRIMARY KEY,
+13. name VARCHAR(100),
+14. location VARCHAR(100)
+15. );
+16. Projects Table:
+17. CREATE TABLE projects (
+18. id INT AUTO_INCREMENT PRIMARY KEY,
+19. name VARCHAR(100),
+20. start_date DATE,
+21. end_date DATE,
+22. budget DECIMAL(10,2)
+23. );
+Step 3: Inserting Data
+1. Insert Employees:
+2. INSERT INTO employees (name, age, department, salary, hire_date) VALUES
+3. ('Alice Johnson', 30, 'IT', 75000.00, '2020-06-15'),
+4. ('Bob Smith', 45, 'HR', 62000.00, '2018-04-22'),
+5. ('Charlie Brown', 28, 'Finance', 58000.00, '2021-09-10'),
+6. ('Diana Prince', 35, 'IT', 80000.00, '2019-11-05'),
+7. ('Ethan Hunt', 40, 'Management', 90000.00, '2016-02-14');
+8. Insert Departments:
+9. INSERT INTO departments (name, location) VALUES
+10. ('IT', 'New York'),
+11. ('HR', 'Los Angeles'),
+12. ('Finance', 'Chicago'),
+13. ('Management', 'San Francisco');
+14. Insert Projects:
+15. INSERT INTO projects (name, start_date, end_date, budget) VALUES
+16. ('Website Redesign', '2023-01-01', '2023-06-30', 50000.00),
+17. ('AI Integration', '2023-02-15', '2023-12-15', 120000.00),
+18. ('Employee Training', '2023-03-01', '2023-09-30', 30000.00);
+Step 4: Practicing Queries
+Basic Queries:
+1. Retrieve all employees:
+2. SELECT * FROM employees;
+3. Find employees in the IT department:
+4. SELECT * FROM employees WHERE department = 'IT';
+5. List all departments:
+6. SELECT * FROM departments;
+Intermediate Queries:
+4. Find employees earning more than $60,000:
